@@ -35,7 +35,7 @@ def start(bot, update):
     reply_keyboard = [['Help', 'Information', 'Reports']]
 
     update.message.reply_text(
-        'Hi! My name is NellBot, i am EPM Chat Bot. i`d like to help. '
+        'Hi! My name is NellBot, i am EPM Chat Bot. i`d like to help you. '
         'Send /cancel to stop talking to me.\n\n'
         'Please select one of these options?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True))
@@ -67,7 +67,7 @@ def photo(bot, update):
 def skip_photo(bot, update):
     user = update.message.from_user
     logger.info("User %s did not send a photo.", user.first_name)
-    update.message.reply_text('Well i understand , but then it will be hard to understand the problem. Please let me know where are you, '
+    update.message.reply_text('Fine , but then it will be hard to understand the problem. Please let me know where are you, '
                               'or send /skip.')
 
     return LOCATION
