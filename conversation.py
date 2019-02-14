@@ -88,7 +88,7 @@ def skip_location(bot, update):
     user = update.message.from_user
     logger.info("User %s did not send a location.", user.first_name)
     update.message.reply_text('Then it will be hard to find you '
-                              'Please text your adress.''https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwizpIb-47rgAhVQY1AKHZk4A28QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBender_(Futurama)&psig=AOvVaw0aRP83tBsP1MsCTBk5fP_p&ust=1550218468680410')
+                              'Please text your adress.')
 
     return BIO
 
@@ -96,7 +96,7 @@ def skip_location(bot, update):
 def bio(bot, update):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
-    update.message.reply_text('Thank you!',' https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwizpIb-47rgAhVQY1AKHZk4A28QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBender_(Futurama)&psig=AOvVaw0aRP83tBsP1MsCTBk5fP_p&ust=1550218468680410')
+    update.message.reply_text('Thank you!' user.first_name)
 
     return ConversationHandler.END
 
@@ -104,7 +104,7 @@ def bio(bot, update):
 def cancel(bot, update):
     user = update.message.from_user
     logger.info("User %s canceled the conversation.", user.first_name)
-    update.message.reply_text('Bye! Thank you!',
+    update.message.reply_text('Bye! Thank you!',user.first_name
                               reply_markup=ReplyKeyboardRemove())
 
     return ConversationHandler.END
