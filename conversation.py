@@ -96,15 +96,15 @@ def skip_location(bot, update):
 def bio(bot, update):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
-    update.message.reply_text('Thank you!' user.first_name)
-
+    update.message.reply_text('Thank you!')
+    bot.send_photo(chat_id=chat_id, photo=open('https://www.nellarmonia.com/wp-content/uploads/2015/12/nellarmonia.pngg', 'rb'))
     return ConversationHandler.END
 
 
 def cancel(bot, update):
     user = update.message.from_user
     logger.info("User %s canceled the conversation.", user.first_name)
-    update.message.reply_text('Bye! Thank you!',user.first_name
+    update.message.reply_text('Bye! Thank you!'
                               reply_markup=ReplyKeyboardRemove())
 
     return ConversationHandler.END
