@@ -96,7 +96,7 @@ def skip_location(bot, update):
 def bio(bot, update):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
-    update.message.reply_text('Thank you!')
+    # update.message.reply_text('Thank you!')
     bot.send_photo(chat_id=chat_id, photo=open('https://www.nellarmonia.com/wp-content/uploads/2015/12/nellarmonia.pngg', 'rb'))
     return ConversationHandler.END
 
