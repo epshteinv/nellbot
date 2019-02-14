@@ -35,7 +35,7 @@ def start(bot, update):
     reply_keyboard = [['Help', 'Information', 'Reports']]
 
     update.message.reply_text(
-        'Hi! My name is Nelly, i am EPM Chat Bot. I will i`d like to help. '
+        'Hi! My name is Nelly, i am EPM Chat Bot. i`d like to help. '
         'Send /cancel to stop talking to me.\n\n'
         'Please select one of these options?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True))
@@ -67,7 +67,7 @@ def photo(bot, update):
 def skip_photo(bot, update):
     user = update.message.from_user
     logger.info("User %s did not send a photo.", user.first_name)
-    update.message.reply_text('Thank you. Now, send me your location please, '
+    update.message.reply_text('Well i understand , but then it will be hard to understand the problem. Please let me know where are you, '
                               'or send /skip.')
 
     return LOCATION
@@ -88,7 +88,7 @@ def skip_location(bot, update):
     user = update.message.from_user
     logger.info("User %s did not send a location.", user.first_name)
     update.message.reply_text('Then it will be hard to find you '
-                              'Please text your adress.')
+                              'Please text your adress.''https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwizpIb-47rgAhVQY1AKHZk4A28QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBender_(Futurama)&psig=AOvVaw0aRP83tBsP1MsCTBk5fP_p&ust=1550218468680410')
 
     return BIO
 
@@ -96,7 +96,7 @@ def skip_location(bot, update):
 def bio(bot, update):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
-    update.message.reply_text('Thank you!')
+    update.message.reply_text('Thank you!',' https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwizpIb-47rgAhVQY1AKHZk4A28QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBender_(Futurama)&psig=AOvVaw0aRP83tBsP1MsCTBk5fP_p&ust=1550218468680410')
 
     return ConversationHandler.END
 
