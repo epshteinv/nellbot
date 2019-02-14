@@ -35,7 +35,7 @@ def start(bot, update):
     reply_keyboard = [['Help', 'Information', 'Reports']]
 
     update.message.reply_text(
-        'Hi! My name is Nelly, i am EPM Chat Bot. i`d like to help. '
+        'Hi! My name is NellBot, i am EPM Chat Bot. i`d like to help. '
         'Send /cancel to stop talking to me.\n\n'
         'Please select one of these options?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True))
