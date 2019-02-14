@@ -97,7 +97,7 @@ def bio(bot, update):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
     # update.message.reply_text('Thank you!')
-    bot.send_photo(chat_id= update.effective_message.chat_id, photo=open('https://www.nellarmonia.com/wp-content/uploads/2015/12/nellarmonia.pngg', 'rb'))
+    bot.send_photo(chat_id= update.effective_message.chat_id, photo=open('https://www.nellarmonia.com/wp-content/uploads/2015/12/nellarmonia.png', 'rb'))
     return ConversationHandler.END
 
 
