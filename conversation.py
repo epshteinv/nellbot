@@ -97,7 +97,7 @@ def bio(bot, update):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
     # update.message.reply_text('Thank you!')
-    bot.send_document(chat_id= update.effective_message.chat_id, document=open('bin/nellbot/EPM.pdf', 'rb'))
+    bot.send_document(chat_id= update.effective_message.chat_id, document=open('/root/EPM.pdf', 'rb'))
     return ConversationHandler.END
 
 
