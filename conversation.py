@@ -104,7 +104,7 @@ def bio(bot, update):
 def cancel(bot, update):
     user = update.message.from_user
     logger.info("User %s canceled the conversation.", user.first_name)
-    update.message.reply_text('Bye! Thank you!'
+    update.message.reply_text('Bye! Thank you!',
                               reply_markup=ReplyKeyboardRemove())
 
     return ConversationHandler.END
