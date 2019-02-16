@@ -96,9 +96,10 @@ def skip_location(bot, update):
 def bio(bot, update):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
-    # update.message.reply_text('Thank you!')
-    # update.message.reply_text('Please download admin guide\n\n')
-       update.message.reply_text('https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/EPM-INFORMATION-DEVELOPMENT-TEAM-E94139-6691CB58.pdf')
+    
+       update.message.reply_text('Please download admin guide\n\n'
+        'https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/EPM-INFORMATION-DEVELOPMENT-TEAM-E94139-6691CB58.pdf',
+                              reply_markup=ReplyKeyboardRemove())
     return ConversationHandler.END
 
 
