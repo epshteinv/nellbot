@@ -98,7 +98,7 @@ def bio(bot, update):
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
     # update.message.reply_text('Thank you!')
     # update.message.reply_text('Please download admin guide\n\n')
-       update.message.reply_text('https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/EPM-INFORMATION-DEVELOPMENT-TEAM-E94139-6691CB58.pdf', 'rb')
+       update.message.reply_text('https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/EPM-INFORMATION-DEVELOPMENT-TEAM-E94139-6691CB58.pdf')
     return ConversationHandler.END
 
 
