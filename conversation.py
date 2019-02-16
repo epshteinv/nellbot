@@ -97,7 +97,7 @@ def bio(bot, update):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
     # update.message.reply_text('Thank you!')
-    bot.send_document(chat_id= update.effective_message.chat_id, document=('http://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/EPM-INFORMATION-DEVELOPMENT-TEAM-E94139-6691CB58.pdf', 'rb'))
+    bot.send_document(chat_id= update.effective_message.chat_id, document='http://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/EPM-INFORMATION-DEVELOPMENT-TEAM-E94139-6691CB58.pdf', 'rb'))
     return ConversationHandler.END
 
 
